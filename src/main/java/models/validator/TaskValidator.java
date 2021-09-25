@@ -12,6 +12,7 @@ public class TaskValidator {
         List<String> errors = new ArrayList<String>();
 
         String content_error = validateContent(t.getContent());
+
         if(!content_error.equals("")) {
             errors.add(content_error);
         }
@@ -21,7 +22,7 @@ public class TaskValidator {
     }
     private static String validateContent(String content) {
         if(content == null || content.equals("")) {
-            return "入力してください";
+            return "入力内容が空欄です";
         }
         return "";
 
